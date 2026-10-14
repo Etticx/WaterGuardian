@@ -1,4 +1,7 @@
-The Monitor model is trained separately. This build does not train an ML model.
+The Monitor model is trained separately from the application. Use
+`notebooks/Water_Guardian_ML_Colab.ipynb` for the Logistic Regression and Random
+Forest training workflow. Its downloaded package contains a compatible bundle
+and an evaluation JSON measured on reserved recordings.
 
 Export one joblib bundle to `models/monitor.joblib`:
 

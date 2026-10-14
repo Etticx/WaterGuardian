@@ -1,0 +1,206 @@
+{
+  "title": "BioGuard - Simple System Architecture",
+  "elements": [
+    {
+      "tag": "Shape",
+      "id": "phone",
+      "x": 70,
+      "y": 170,
+      "width": 390,
+      "height": 175,
+      "bgColor": "#EEF5FC",
+      "borderColor": "#A6BED5",
+      "texts": [
+        {
+          "text": "Staff phone web app",
+          "fontSize": 18
+        },
+        {
+          "text": "Take photo / select block\nView tasks / upload field evidence",
+          "fontSize": 14,
+          "color": "#536371"
+        }
+      ]
+    },
+    {
+      "tag": "Shape",
+      "id": "api",
+      "x": 645,
+      "y": 155,
+      "width": 390,
+      "height": 205,
+      "bgColor": "#E3EFFB",
+      "borderColor": "#8EAFCF",
+      "texts": [
+        {
+          "text": "BioGuard backend",
+          "fontSize": 18
+        },
+        {
+          "text": "FastAPI\nTickets / schedules / work orders\nNotifications / follow-up tracking",
+          "fontSize": 14,
+          "color": "#536371"
+        }
+      ]
+    },
+    {
+      "tag": "Shape",
+      "id": "dashboard",
+      "x": 1220,
+      "y": 170,
+      "width": 390,
+      "height": 175,
+      "bgColor": "#F8F1E7",
+      "borderColor": "#D2BFA3",
+      "texts": [
+        {
+          "text": "Management & ecology\nweb dashboard",
+          "fontSize": 18
+        },
+        {
+          "text": "Photo and ticket log / ecology review\nCrew assignment / follow-up status",
+          "fontSize": 14,
+          "color": "#536371"
+        }
+      ]
+    },
+    {
+      "tag": "Shape",
+      "id": "ml",
+      "x": 145,
+      "y": 500,
+      "width": 390,
+      "height": 155,
+      "bgColor": "#EEF6EF",
+      "borderColor": "#A9C9AF",
+      "texts": [
+        {
+          "text": "Plant identification\nmodel",
+          "fontSize": 18
+        },
+        {
+          "text": "MobileNetV2\nSpecies suggestions and confidence",
+          "fontSize": 14,
+          "color": "#536371"
+        }
+      ]
+    },
+    {
+      "tag": "Shape",
+      "id": "storage",
+      "x": 645,
+      "y": 500,
+      "width": 390,
+      "height": 155,
+      "bgColor": "#F4F6F8",
+      "borderColor": "#BBC5CE",
+      "texts": [
+        {
+          "text": "Records & photo storage",
+          "fontSize": 18
+        },
+        {
+          "text": "SQLite database + private photo files\nReports / decisions / evidence / history",
+          "fontSize": 14,
+          "color": "#536371"
+        }
+      ]
+    },
+    {
+      "tag": "Shape",
+      "id": "assistant",
+      "x": 1145,
+      "y": 500,
+      "width": 390,
+      "height": 155,
+      "bgColor": "#F4F6F8",
+      "borderColor": "#BBC5CE",
+      "texts": [
+        {
+          "text": "AI case assistant\n(optional)",
+          "fontSize": 18
+        },
+        {
+          "text": "Draft summaries and checklists\nEcological decisions stay human",
+          "fontSize": 14,
+          "color": "#536371"
+        }
+      ]
+    },
+    {
+      "tag": "Relationship",
+      "id": "connection-0",
+      "from": "phone",
+      "to": "api",
+      "label": "Reports and tasks",
+      "startArrowhead": "triangle",
+      "endArrowhead": "triangle"
+    },
+    {
+      "tag": "Relationship",
+      "id": "connection-1",
+      "from": "api",
+      "to": "dashboard",
+      "label": "Review and work orders",
+      "startArrowhead": "triangle",
+      "endArrowhead": "triangle"
+    },
+    {
+      "tag": "Relationship",
+      "id": "connection-2",
+      "from": "api",
+      "to": "ml",
+      "label": "Identify plant",
+      "startArrowhead": "triangle",
+      "endArrowhead": "triangle"
+    },
+    {
+      "tag": "Relationship",
+      "id": "connection-3",
+      "from": "api",
+      "to": "storage",
+      "label": "Save / retrieve",
+      "startArrowhead": "triangle",
+      "endArrowhead": "triangle"
+    },
+    {
+      "tag": "Relationship",
+      "id": "connection-4",
+      "from": "api",
+      "to": "assistant",
+      "label": "Draft case brief",
+      "startArrowhead": "triangle",
+      "endArrowhead": "triangle"
+    },
+    {
+      "tag": "Textbox",
+      "id": "title",
+      "x": 70,
+      "y": 35,
+      "width": 1250,
+      "height": 50,
+      "text": "BioGuard - SDP township inspection and restoration",
+      "fontSize": 28
+    },
+    {
+      "tag": "Textbox",
+      "id": "lifecycle",
+      "x": 120,
+      "y": 720,
+      "width": 1440,
+      "height": 45,
+      "text": "Report -> Identify -> Ecology review -> Approved work -> Follow-up",
+      "fontSize": 20
+    },
+    {
+      "tag": "Textbox",
+      "id": "approval-note",
+      "x": 340,
+      "y": 785,
+      "width": 1000,
+      "height": 30,
+      "text": "Ecology approval required before removal or replanting. Proposed MVP.",
+      "fontSize": 16
+    }
+  ]
+}

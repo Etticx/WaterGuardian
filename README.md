@@ -103,6 +103,11 @@ new replay sessions and preserves previous investigations and their evidence.
 
 ## Connect the model later
 
+Use [the Colab notebook](notebooks/Water_Guardian_ML_Colab.ipynb) to audit the data
+and compare Logistic Regression and Random Forest across the eight requested
+development configurations. [Notebook instructions](notebooks/README.md) explain
+how eight workbooks become one table and how the reserved recording test works.
+
 Train and evaluate separately, then save the bundle to `models/monitor.joblib`.
 The bundle contains `model`, ordered `features`, `class_map`, and an optional
 `version`. The model receives a pandas DataFrame, so include preprocessing inside
